@@ -1,0 +1,87 @@
+.static {
+    /*background-color: red;*/
+    transition: .5s;
+}
+
+.touched {
+    cursor: grab;
+    animation-name: swing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+.moving {
+    cursor: grabbing;
+    position: absolute;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+
+}
+
+.moveStart {
+    position: absolute;
+    scale: .8;
+
+
+}
+
+
+
+@keyframes swing {
+    0% {
+        rotate: 0deg;
+    }
+    5% {
+        rotate: 5deg;
+    }
+    10% {
+        rotate: -5deg;
+    }
+    15% {
+        rotate: 4deg;
+    }
+    20% {
+        rotate: -4deg;
+    }
+    25% {
+        rotate: 3deg;
+    }
+    30% {
+        rotate: -3deg;
+    }
+    35% {
+        rotate: 2deg;
+    }
+    40% {
+        rotate: -2deg;
+    }
+    45% {
+        rotate: 1deg;
+    }
+    50% {
+        rotate: -1deg;
+    }
+    55% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 0deg;
+    }
+
+}
+
+@keyframes bounce {
+    0% {
+        opacity: .7;
+    }
+    50% {
+        opacity: .9;
+    }
+    100% {
+        opacity: .7;
+    }
+
+}
